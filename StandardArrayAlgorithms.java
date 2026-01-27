@@ -6,6 +6,9 @@ public class StandardArrayAlgorithms
   public static void main(String[] args)
   {
     int[] goals = {1, 2, 0, 3, 2, 4, 2, 1, 0, 2, 0, 1, 3, 2};
+    Player[] players = {new Player("Alex", 12), new Player("Aiden", 13),
+    new Player("Bobbie", 18), new Player("Blaine", 20),
+    new Player("Chris", 15), new Player("Charlie", 15)};
     
     int sum = 0;
     for (int i = 0; i < goals.length; i++)
@@ -25,6 +28,20 @@ public class StandardArrayAlgorithms
       }
     }
     System.out.println("The max goal amount was: "+max);
+  
+
+    // finding a player 18 or older
+    boolean foundPlayer = false;
+    int t = 0;
+    while(t<players.length){
+      while (foundPlayer = false){
+        if (players[t].getAge >= 18){
+
+      }
+    }
+
+    }
+    
   }
 
   
