@@ -31,20 +31,61 @@ public class StandardArrayAlgorithms
   
 
     // finding a player 18 or older
-    boolean foundPlayer = false;
+    String oldPlayer = "";
+    boolean hasValue = false;
+
     int t = 0;
-    while(t<players.length){
-      while (foundPlayer = false){
-        if (players[t].getAge >= 18){
-
+    while(hasValue == false){
+      
+      if (players[t].getAge()>= 18){
+        oldPlayer = players[t].getName();
+        hasValue = true;
       }
+      t++;
     }
 
+    System.out.println(oldPlayer +" is 18 or older");
+
+
+    System.out.println("the players are: ");
+    t= 0;
+    for(Player p: players){
+      System.out.print(p.getName());
+
+      if( t%2 == 0){
+        System.out.print(" and ");
+      }
+      else{
+        System.out.println("");
+      }
+      t++;
     }
+
+    int[] cookingLevel = {6,7,67,21,8,9};
+    System.out.println("\n\n\n\nchat are we cooked???: ");
     
+    
+    for(int sixSeven: cookingLevel){
+      System.out.print(sixSeven+", ");
+    }
+    int tempRot;
+    System.out.println("\n");
+    for(t=0;t<cookingLevel.length-1;t++){
+      tempRot = cookingLevel[t];
+      cookingLevel[t] = cookingLevel[t+1];
+      cookingLevel[t+1] = tempRot;
+    }
+    for(int sixSeven: cookingLevel){
+      System.out.print(sixSeven+", ");
+    }
+    System.out.println("\n\n\n\n\n");
+
+    String[] brainRot = {"tun tun tun sahur","assassino capuchino","bombini goosini","girraffe","frullili fruilla","glorbo"};
+    for(t=brainRot.length;t>0;t--){
+      System.out.println(brainRot[t-1]);
+    }
+
   }
-
-  
-
-  
+    
 }
+
