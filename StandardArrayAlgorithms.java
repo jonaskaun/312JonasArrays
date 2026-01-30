@@ -79,11 +79,28 @@ public class StandardArrayAlgorithms
       System.out.print(sixSeven+", ");
     }
     System.out.println("\n\n\n\n\n");
-
+    String rotTemp ="";
     String[] brainRot = {"tun tun tun sahur","assassino capuchino","bombini goosini","girraffe","frullili fruilla","glorbo"};
     for(t=brainRot.length;t>0;t--){
-      System.out.println(brainRot[t-1]);
+      System.out.print(brainRot[t-1]+" ; ");
     }
+    System.out.println("\n\n\nchanged\n\n");
+    
+    for(t=brainRot.length-1;t>1;t--){
+      
+      rotTemp = brainRot[t-1];
+      brainRot[t-1] = brainRot[t];
+      brainRot[t] = rotTemp;
+      System.out.print(brainRot[t-1]+" ; ");
+    }
+    int numbersTemp;
+    System.out.print("\n\n\n reverse order \n\n\n");
+    int[] Numbers = {1,2,3,4,5,6,7,8,9,10,11};
+    for(t=0;t>Numbers.length%2;t++){
+      numbersTemp = Numbers[t]
+    }
+    
+    
 
   }
     
