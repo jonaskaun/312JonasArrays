@@ -96,9 +96,20 @@ public class StandardArrayAlgorithms
     int numbersTemp;
     System.out.print("\n\n\n reverse order \n\n\n");
     int[] Numbers = {1,2,3,4,5,6,7,8,9,10,11};
-    for(t=0;t>Numbers.length%2;t++){
-      numbersTemp = Numbers[t]
+    for(int num:Numbers){
+      System.out.print(num+",");
     }
+    System.out.print("\n");
+    for(t=0;t<Numbers.length/2;t++){
+      numbersTemp = Numbers[t];
+      Numbers[t] = Numbers[((Numbers.length)-1)-t];
+      Numbers[((Numbers.length)-1)-t] = numbersTemp;
+    }
+    for(int num:Numbers){
+      System.out.print(num+",");
+    }
+
+    
     
     
 
