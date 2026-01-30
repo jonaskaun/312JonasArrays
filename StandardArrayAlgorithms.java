@@ -109,7 +109,33 @@ public class StandardArrayAlgorithms
       System.out.print(num+",");
     }
 
-    
+    System.out.print("\n\nrandom permutations\n\n");
+
+    int[] p = {1,3,5,7,9,11,2,4,6,8,10};
+    int[] r = new int[11];
+    int increment = 0;
+    int decrement = p.length;
+    for(int pTest:p){
+      System.out.print(pTest+" : ");
+    }
+    int randomInt;
+    for(int pan:p){
+      randomInt = (int)(Math.random()*decrement);
+      int pTemp = p[randomInt];
+      r[increment] = pTemp;
+      p[randomInt] = p[p.length-1];
+      increment ++;
+      decrement --;
+    }
+    System.out.println("");
+    for(int ran:r){
+      System.out.print(ran+" : ");
+    }
+
+
+
+
+
     
     
 
